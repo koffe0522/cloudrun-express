@@ -1,0 +1,13 @@
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: [
+        "build",
+        "-f",
+        "Dockerfile",
+        "-t",
+        "gcr.io/gcp-test-project-290004/cloudrun-express", # ①
+        ".",
+      ]
+images:
+  # ①と同じ
+  - gcr.io/gcp-test-project-290004/cloudrun-express
